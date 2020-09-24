@@ -27,3 +27,20 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+
+
+<form name="contacttest" method="POST" data-netlify="true">
+  <p>
+    <label>Your text: <input type="text" name="text" /></label>   
+  </p>
+  
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <label>GDPR: <input type="checkbox" name="gdpr"/>   </label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
