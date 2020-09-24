@@ -29,18 +29,119 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-talk]: https://talk.jekyllrb.com/
 
 
-<form name="contacttest" method="POST" data-netlify="true">
-  <p>
-    <label>Your text: <input type="text" name="text" /></label>   
-  </p>
-  
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <label>GDPR: <input type="checkbox" name="gdpr"/>   </label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+<style>
+input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: #282828;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #111;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+</style>
+
+<div class="container">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="no-bots-field">
+        <p class="hidden" style="display: none;">
+            <label>Don’t fill this out if you're human: <input name="no-bots-field" /></label>
+        </p>
+        <div class="row">
+            <div class="col-25">
+                <label for="email">Email</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="email" id="email" placeholder="email@gmail.com">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="reason">Oggetto</label>
+            </div>
+            <div class="col-75">
+                <select id="reason" name="reason">
+                    <option value="link">Uno o piu' link non portano alla risorsa desiderata</option>
+                    <option value="image">Una o piu' immagini non caricano/non sono disponibili</option>
+                    <option value="css">Elementi della pagina si sovrappongono/non sono interagibili</option>
+                    <option value="suggestion">Consiglio di scrivere riguardo un argomento</option>
+                    <option value="incorrect-info">Un articolo contiene informazioni errate</option>
+                    <option value="other">Altro</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="message">Testo</label>
+            </div>
+            <div class="col-75">
+                <textarea id="message" name="message" placeholder="Scrivi qui il messaggio.." style="height:200px"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="gdpr">Consenso GDPR</label>
+            </div>
+            <div class="col-75">
+                <input type="checkbox" name="gdpr" id="gdpr" />
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Invia">
+        </div>
+    </form>
+</div>
