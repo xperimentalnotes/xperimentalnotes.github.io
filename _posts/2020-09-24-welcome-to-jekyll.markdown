@@ -30,6 +30,9 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 
 
 <style>
+    * {
+      box-sizing: border-box;
+    }
 input[type=text],
     select,
     textarea {
@@ -106,7 +109,7 @@ input[type=text],
                 <label for="email">Email</label>
             </div>
             <div class="col-75">
-                <input type="text" name="email" id="email" placeholder="email@gmail.com">
+                <input type="text" name="email" id="email" placeholder="email@gmail.com" required>
             </div>
         </div>
         <div class="row">
@@ -114,7 +117,7 @@ input[type=text],
                 <label for="reason">Oggetto</label>
             </div>
             <div class="col-75">
-                <select id="reason" name="reason">
+                <select id="reason" name="reason" required>
                     <option value="link">Uno o piu' link non portano alla risorsa desiderata</option>
                     <option value="image">Una o piu' immagini non caricano/non sono disponibili</option>
                     <option value="css">Elementi della pagina si sovrappongono/non sono interagibili</option>
@@ -129,7 +132,7 @@ input[type=text],
                 <label for="message">Testo</label>
             </div>
             <div class="col-75">
-                <textarea id="message" name="message" placeholder="Scrivi qui il messaggio.." style="height:200px"></textarea>
+                <textarea id="message" name="message" placeholder="Scrivi qui il messaggio.." style="height:250px" required></textarea>
             </div>
         </div>
         <div class="row">
@@ -137,7 +140,7 @@ input[type=text],
                 <label for="gdpr">Consenso GDPR</label>
             </div>
             <div class="col-75">
-                <input type="checkbox" name="gdpr" id="gdpr" />
+                <input type="checkbox" name="gdpr" id="gdpr" required />
             </div>
         </div>
         <div class="row">
