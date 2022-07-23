@@ -68,9 +68,9 @@ GEM
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
-    tzinfo (1.2.9)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2021.1)
+    tzinfo-data (1.2022.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
     wdm (0.1.1)
@@ -83,7 +83,7 @@ DEPENDENCIES
   jekyll (~> 4.0.1)
   jekyll-feed (~> 0.15, >= 0.15.1)
   minima (~> 2.5, >= 2.5.1)
-  tzinfo (~> 1.2)
+  tzinfo (~> 1.2, >= 1.2.10)
   tzinfo-data
   wdm (~> 0.1.1)
 
