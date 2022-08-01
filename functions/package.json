@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "netlify": "^7.0.0"
+    "netlify": "^11.0.0"
   }
 }
